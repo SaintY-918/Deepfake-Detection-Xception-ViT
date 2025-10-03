@@ -1,0 +1,25 @@
+
+# --- 訓練相關參數 ---
+training:
+  lr: 0.0001
+  weight-decay: 0.0001
+  bs: 32
+  scheduler: 'steplr'
+  gamma: 0.1
+  step-size: 10
+  frames-per-video: 30
+
+# --- 模型相關參數 ---
+model:
+  image-size: 299
+  num-classes: 1
+  
+# --- Vision Transformer 相關參數 ---
+vit:
+  dim: 1024
+  depth: 6
+  heads: 8
+  mlp-dim: 2048
+  # ******** 修正：新增 dim_head 參數 ********
+  # 這是每個注意力頭的維度，通常設定為 dim / heads (1024 / 8 = 128)
+  dim_head: 128

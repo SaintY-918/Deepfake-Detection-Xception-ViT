@@ -1,0 +1,19 @@
+# Python 虛擬環境和快取
+__pycache__/
+*.pyc
+venv/
+torch_env/
+
+# IDE 和作業系統檔案
+.idea/
+.vscode/
+.DS_Store
+
+# 訓練好的模型權重
+# 這會忽略 models 資料夾裡的所有 .pth 檔案
+models/*.pth
+
+# 日誌和大型資料檔
+*.log
+*.zip
+*.csv
